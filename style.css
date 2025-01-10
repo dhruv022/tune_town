@@ -20,7 +20,7 @@ header {
   width: 100%;
   background: linear-gradient(to right, #000000, #1a2844);
   color: rgba(255, 255, 255, 0.836);
-  padding: 20px 30px;
+  padding: 14px 30px 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   border-radius: 0 0 20px 20px;
@@ -82,7 +82,7 @@ header h1 {
 }
 
 section {
-  height: 85vh;
+  height: 87vh;
   scroll-snap-align: start;
   margin-bottom: 20px;
   padding: 15px 30px;
@@ -95,7 +95,7 @@ section {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.icons-background {
+/* .icons-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -107,34 +107,34 @@ section {
 
 .fa-music-thin {
   font-size: 48px;
-  /* Adjust size */
+  Adjust size
   font-weight: 100;
-  /* Very thin */
+  Very thin
   color: white;
-  /* Icon color */
+  Icon color
   -webkit-text-stroke: 0.5px black;
-  /* Minimal stroke */
+  Minimal stroke
   opacity: 0.5;
-  /* Reduced opacity for lighter appearance */
+  Reduced opacity for lighter appearance
   transform: scaleY(0.9);
-  /* Slight vertical squish for thinness */
+  Slight vertical squish for thinness
 }
 
-/* Individual icon */
+Individual icon
 .icon {
   position: absolute;
   font-size: 20px;
-  /* Icon size */
+  Icon size
   font-weight: 1;
   color: #ffffffb2;
-  /* Icon color */
+  Icon color
   animation: moveRandom 8s ease-in-out infinite;
 }
 
-/* Rotation animation */
+Rotation animation
 
 
-/* Random movement animation */
+Random movement animation
 @keyframes moveRandom {
   0% {
     transform: translate(0, 0);
@@ -155,7 +155,7 @@ section {
   100% {
     transform: translate(0, 0);
   }
-}
+} */
 
 /* Content below header */
 
@@ -361,3 +361,11 @@ footer {
 .m_0 {
   padding: 0px !important;
 }
+
+.logo_img{
+  height: 48px; 
+  width: 150px;
+  margin-left: 20px;
+  border-radius: 15px;
+}
+
