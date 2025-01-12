@@ -1,39 +1,146 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".count");
-    const speed = 300; // Adjust speed for animation
-  
-    const startCounting = (counter) => {
-      const target = +counter.getAttribute("data-count");
-      const increment = target / speed;
-  
-      const updateCount = () => {
-        const currentCount = +counter.innerText;
-        if (currentCount < target) {
-          counter.innerText = Math.ceil(currentCount + increment);
-          setTimeout(updateCount, 20);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCount();
+  const counters = document.querySelectorAll(".count");
+  const speed = 300; // Adjust speed for animation
+
+  const startCounting = (counter) => {
+    const target = +counter.getAttribute("data-count");
+    const increment = target / speed;
+
+    const updateCount = () => {
+      const currentCount = +counter.innerText;
+      if (currentCount < target) {
+        counter.innerText = Math.ceil(currentCount + increment);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
     };
+    updateCount();
+  };
+
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    threshold: 0.2, // Trigger when 20% of the element is visible
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        counter.innerText = "0"; // Reset the counter value
+        startCounting(counter);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  counters.forEach((counter) => observer.observe(counter));
+});
+
+
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  const cards = document.querySelector('.cards');
   
-    const observerOptions = {
-      root: null, // Use the viewport as the root
-      threshold: 0.2, // Trigger when 20% of the element is visible
-    };
+  let scrollAmount = 0;
+  const cardWidth = document.querySelector('.outer_card').offsetWidth + 16; // Include gap
   
-    const observerCallback = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const counter = entry.target;
-          startCounting(counter);
-          observer.unobserve(counter); // Stop observing once counted
-        }
-      });
-    };
-  
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    counters.forEach((counter) => observer.observe(counter));
+  // Left arrow click functionality
+  leftArrow.addEventListener('click', () => {
+    scrollAmount -= cardWidth;
+    if (scrollAmount < 0) {
+      scrollAmount = 0;
+    }
+    cards.style.transform = `translateX(-${scrollAmount}px)`;
   });
   
+  // Right arrow click functionality
+  rightArrow.addEventListener('click', () => {
+    const maxScroll = cards.scrollWidth - cards.parentElement.offsetWidth;
+    scrollAmount += cardWidth;
+    if (scrollAmount > maxScroll) {
+      scrollAmount = maxScroll;
+    }
+    cards.style.transform = `translateX(-${scrollAmount}px)`;
+  });
+  
+  let autoScrollInterval;
+  
+  // Auto-scroll function
+  function autoScroll() {
+    const maxScroll = cards.scrollWidth - cards.parentElement.offsetWidth;
+  
+    autoScrollInterval = setInterval(() => {
+      scrollAmount += cardWidth;
+      if (scrollAmount > maxScroll) {
+        scrollAmount = 0; // Reset to start when reaching the end
+      }
+      cards.style.transform = `translateX(-${scrollAmount}px)`;
+    }, 2000); // Change cards every 2 seconds
+  }
+  
+  // Stop auto-scroll
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+  
+  // Detect when the section is visible
+  const section = document.querySelector('.carousel');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          autoScroll(); // Start auto-scroll when section comes into view
+        } else {
+          stopAutoScroll(); // Stop auto-scroll when the section is out of view
+        }
+      });
+    },
+    { threshold: 0.2 } // Trigger when 50% of the section is visible
+  );
+  
+  observer.observe(section);
+  
+  // Pause auto-scroll on hover
+  cards.addEventListener('mouseover', stopAutoScroll);
+  
+  // Resume auto-scroll when not hovering
+  cards.addEventListener('mouseout', autoScroll);
+  
+
+  function showForm() {
+    // Hide main content and show form
+    document.getElementById("main-content").style.display = "none";
+    document.getElementById("form-container").style.display = "block";
+}
+
+function goBack() {
+    // Hide form and show main content
+    document.getElementById("form-container").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+}
+
+
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the form values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Log the values to the console
+  console.log("Name:", name);
+  console.log("Email:", email);
+  console.log("Message:", message);
+
+  // Clear the form fields
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+
+  // Optional: Display an alert or success message
+  alert("Form submitted successfully!");
+});
+
