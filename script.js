@@ -121,26 +121,40 @@ function goBack() {
 }
 
 
+// Include the latest EmailJS SDK
+emailjs.init('kTDSaEuuPdnK72X4n'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+
 document.getElementById("myForm").addEventListener("submit", function(event) {
-  // Prevent the default form submission behavior
   event.preventDefault();
 
-  // Get the form values
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
 
-  // Log the values to the console
   console.log("Name:", name);
   console.log("Email:", email);
   console.log("Message:", message);
 
-  // Clear the form fields
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("message").value = "";
+  // Send email using the updated EmailJS SDK
+  emailjs.send('service_0qk5nn4', 'template_8p19ztq', {
+    to_name: name,
+    from_email: email,
+    message: message,
+  })
+    .then(() => {
+      alert('Email sent successfully!');
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    })
+    .catch((error) => {
+      alert('Failed to send email. Please try again later.');
+      console.error('Error:', error);
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    });
 
-  // Optional: Display an alert or success message
   alert("Form submitted successfully!");
 });
 

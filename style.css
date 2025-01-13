@@ -584,7 +584,9 @@ footer {
   }
 }
 
-
+.whats_link{
+  text-decoration: none;
+}
 
 
 .carousel {
