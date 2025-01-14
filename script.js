@@ -122,7 +122,7 @@ function goBack() {
 
 
 // Include the latest EmailJS SDK
-emailjs.init('kTDSaEuuPdnK72X4n'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+emailjs.init('XnotRJFmojCxVe0Lo'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
 
 document.getElementById("myForm").addEventListener("submit", function(event) {
   event.preventDefault();
@@ -136,7 +136,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
   console.log("Message:", message);
 
   // Send email using the updated EmailJS SDK
-  emailjs.send('service_0qk5nn4', 'template_8p19ztq', {
+  emailjs.send('service_dz4a8zm', 'template_8fwn5z8', {
     to_name: name,
     from_email: email,
     message: message,
