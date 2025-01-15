@@ -130,6 +130,10 @@ function goBack() {
 
 
 // Include the latest EmailJS SDK
+// template_8fwn5z8
+
+
+// Include the latest EmailJS SDK
 emailjs.init('XnotRJFmojCxVe0Lo'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
 
 document.getElementById("myForm").addEventListener("submit", function(event) {
@@ -137,34 +141,59 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
 
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
+  const phone = document.getElementById("contact").value; // Fetch the phone number
   const message = document.getElementById("message").value;
+
+  //  https://drive.google.com/file/d/1m7cfD4hNl2SJY-AT7HdMWSLdrj4vme10/view?usp=sharing
+
 
   console.log("Name:", name);
   console.log("Email:", email);
+  console.log("Phone:", phone);
   console.log("Message:", message);
 
-  // Send email using the updated EmailJS SDK
-  emailjs.send('service_dz4a8zm', 'template_8fwn5z8', {
+  // Email to the user (person who filled the form)
+  const userEmailParams = {
     to_name: name,
-    from_email: email,
-    message: message,
-  })
+    to_email: email,
+    image_url: 'https://drive.google.com/uc?id=1m7cfD4hNl2SJY-AT7HdMWSLdrj4vme10',
+    message: `Hi ${name},\n\nThank you for contacting us. We have received your message and will get back to you soon.`,
+  };
+  console.log(userEmailParams);
+
+  // Email to the admin
+  const adminEmailParams = {
+    to_name: name, // Admin's name
+    to_email: "dhruv0225@gmail.com", // Admin's email address
+    image_url: 'https://drive.google.com/uc?id=1m7cfD4hNl2SJY-AT7HdMWSLdrj4vme10',
+    message: `You have received a new inquiry:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+  };
+  console.log(adminEmailParams);
+
+  // Send email to the user
+  emailjs.send('service_dz4a8zm', 'template_g1yuu9s', userEmailParams)
     .then(() => {
-      alert('Email sent successfully!');
+      console.log('Thank you email sent to user.');
+
+      // Send email to the admin
+      return emailjs.send('service_dz4a8zm', 'template_8fwn5z8', adminEmailParams);
+    })
+    .then(() => {
+      alert('Emails sent successfully!');
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
+      document.getElementById("contact").value = "";
       document.getElementById("message").value = "";
     })
     .catch((error) => {
-      alert('Failed to send email. Please try again later.');
+      alert('Failed to send emails. Please try again later.');
       console.error('Error:', error);
-      document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("message").value = "";
     });
-
-  alert("Form submitted successfully!");
 });
+
+
+
+
 
 window.onload = function () {
   setTimeout(function () {
