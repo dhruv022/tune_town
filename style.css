@@ -101,8 +101,10 @@ textarea {
 }
 
 body {
-  font-family:'Roboto', Arial, sans-serif;
   line-height: 1.6;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400; /* Regular */
 }
 
 /* Styling for the fixed header */
