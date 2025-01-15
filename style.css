@@ -676,7 +676,7 @@ footer {
   .section3 .img{
     width: 100%;
     img{
-      height: 40%;
+      height: 35%;
       width: 100%;
     }
   }
@@ -845,42 +845,15 @@ footer {
 /* ---------------------------------------- */
 
 
-
-.carousel {
-  position: relative;
-  z-index: 1; /* Ensure it's above the header/footer */
-}
-.main-content {
-  height: calc(100vh - 100px);  /* Adjust for header and footer height */
-  overflow-y: auto;
-}
-
 body, html {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
   overflow: hidden;
 }
 
 .main-content {
-  height: 100vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-}
-
-header, footer {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out;
-  -webkit-transition: transform 0.3s ease-in-out; /* For iOS */
-}
-
-header {
-  top: 0;
-}
-
-footer {
-  bottom: 0;
+  height: 100vh; /* Full height of the viewport */
+  overflow-y: auto; /* Enable scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
 }

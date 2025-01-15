@@ -166,3 +166,16 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
   alert("Form submitted successfully!");
 });
 
+window.onload = function () {
+  setTimeout(function () {
+    window.scrollTo(0, 1);  // Scroll just a bit to hide the address bar
+  }, 500); // Give time for the page to load
+};
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 50) {
+    document.body.style.paddingTop = '0'; // Remove padding-top if you used it for layout
+  }
+});
+
+
