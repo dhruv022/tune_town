@@ -719,7 +719,8 @@ footer {
     .sc1 {
       background: #00000030;
       padding: 10px;
-      border-radius: 20px;
+      /* border-radius: 20px; */
+      border-radius: 20px !important;
 
       .whats_link div {
         width: 150px;
