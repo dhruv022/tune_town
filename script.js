@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelector('.cards');
   
   let scrollAmount = 0;
-  const cardWidth = document.querySelector('.outer_card').offsetWidth + 16; // Include gap
+  const cardWidth = document.querySelector('.outer_card').offsetWidth + 32; // Include gap
   
   // Left arrow click functionality
   leftArrow.addEventListener('click', () => {
@@ -106,7 +106,15 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Resume auto-scroll when not hovering
   cards.addEventListener('mouseout', autoScroll);
+
+  function isMobile() {
+    return window.innerWidth <= 768; // Define mobile breakpoint
+    stopAutoScroll
+  }
   
+  cards.addEventListener('touchstart', stopAutoScroll); // Stop auto-scroll on touch
+cards.addEventListener('touchend', autoScroll); // Resume auto-scroll on touch end
+
 
   function showForm() {
     // Hide main content and show form
