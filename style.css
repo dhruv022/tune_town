@@ -713,6 +713,10 @@ footer {
     height: 50px;
   }
 
+  #main-content .first_p{
+    padding-bottom: 30px !important;
+  }
+
   .section1 {
     display: block;
 
