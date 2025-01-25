@@ -207,4 +207,35 @@ window.addEventListener('scroll', function () {
   }
 });
 
+// function goFullscreen() {
+//   if (document.documentElement.requestFullscreen) {
+//       document.documentElement.requestFullscreen();
+//   } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+//       document.documentElement.webkitRequestFullscreen();
+//   } else if (document.documentElement.msRequestFullscreen) { // IE11
+//       document.documentElement.msRequestFullscreen();
+//   }
+// }
+
+// goFullscreen();
+
+
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    header.classList.add('hidden');
+  } else {
+    // Scrolling up
+    header.classList.remove('hidden');
+  }
+
+  lastScrollTop = Math.max(0, scrollTop); // Avoid negative values
+});
+
+
 
