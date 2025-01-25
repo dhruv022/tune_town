@@ -228,7 +228,7 @@ header h1 {
 }
 
 .main {
-  /* margin-top: 80px; */
+  padding-top: 80px !important;
   padding: 10px 5px;
   width: 100%;
   scroll-padding-top: 80px;
@@ -505,8 +505,8 @@ footer {
 
 .section1 {
   padding: 5vw;
-  top: 80px;
-  margin-bottom: 120px;
+  /* top: 80px; */
+  /* margin-bottom: 120px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
