@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -133,11 +139,13 @@ header {
 
   a {
     text-decoration: none;
+    font-weight: 600;
     color: rgba(255, 255, 255, 0.836);
   }
 
   a:hover {
-    color: white;
+    
+    color: rgb(241, 80, 102);
   }
 
   .innerdiv2 {
@@ -482,15 +490,17 @@ footer {
 }
 
 .first_p {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 
   h1 {
-    padding-bottom: 40px;
+    padding-bottom: 15px;
     font-size: 38px;
   }
 
   p {
-    line-height: 30px;
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 }
 
@@ -558,7 +568,7 @@ footer {
 
 
 .button133:hover {
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(236, 160, 170);
   color: black;
 }
 
@@ -904,4 +914,12 @@ html {
   /* Enable scrolling */
   -webkit-overflow-scrolling: touch;
   /* Smooth scrolling for iOS */
+}
+
+.y1{
+  color: rgb(241, 80, 102);
+}
+
+.b1{
+  font-weight: 800 !important;
 }
