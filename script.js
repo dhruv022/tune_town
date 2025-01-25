@@ -219,6 +219,14 @@ window.addEventListener('scroll', function () {
 
 // goFullscreen();
 
+
+function isMobileByScreenWidth() {
+  return window.innerWidth <= 768; // Adjust the breakpoint as needed
+}
+
+if (isMobileByScreenWidth()) {
+  // Your mobile-specific function
+
 let startY = 0;
 
 document.addEventListener("touchstart", (event) => {
@@ -236,9 +244,23 @@ document.addEventListener("touchmove", (event) => {
   }
 
   startY = currentY; // Update start position
+  console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiii")
 });
 
 
+document.addEventListener("wheel", (event) => {
+  const delta = event.deltaY; // Positive for scrolling down, negative for scrolling up
+  const header = document.querySelector("header");
+
+  if (delta > 0) {
+    header.style.top = "-100px"; // Hide header when "scrolling" down
+  } else {
+    header.style.top = "0"; // Show header when "scrolling" up
+  }
+});
+console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiii")
+
+}
 
 
 
