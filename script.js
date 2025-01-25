@@ -219,23 +219,26 @@ window.addEventListener('scroll', function () {
 
 // goFullscreen();
 
+let startY = 0;
 
-let lastScrollTop = 0;
-const header = document.querySelector('header');
+document.addEventListener("touchstart", (event) => {
+  startY = event.touches[0].clientY;
+});
 
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+document.addEventListener("touchmove", (event) => {
+  const currentY = event.touches[0].clientY;
+  const header = document.querySelector("header");
 
-  if (scrollTop > lastScrollTop) {
-    // Scrolling down
-    header.classList.add('hidden');
+  if (currentY < startY) {
+    header.style.top = "-100px"; // Hide header on swipe up
   } else {
-    // Scrolling up
-    header.classList.remove('hidden');
+    header.style.top = "0"; // Show header on swipe down
   }
 
-  lastScrollTop = Math.max(0, scrollTop); // Avoid negative values
+  startY = currentY; // Update start position
 });
+
+
 
 
 

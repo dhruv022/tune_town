@@ -3,6 +3,10 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+html, body {
+  height: 100%;
+  overflow-y: scroll; /* Ensure vertical scrolling */
+}
 
 * {
   margin: 0;
@@ -203,9 +207,12 @@ header {
 
 /* Add the hidden class to hide the header */
 header.hidden {
-  top: -100px; /* Adjust based on the height of the header */
+  top: -500px; /* Adjust based on the height of the header */
 }
 
+.hidden {
+  top: -500px; /* Adjust based on the height of the header */
+}
 
 .innerdiv2:hover {
   background-color: white;
