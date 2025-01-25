@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  padding-top: 80px;
 }
 html, body {
   height: 100%;
@@ -244,7 +245,7 @@ header h1 {
 }
 
 section {
-  height: 85vh;
+  height: 87vh;
   scroll-snap-align: start;
   margin-bottom: 40px;
   padding: 15px 30px;
@@ -504,7 +505,8 @@ footer {
 
 .section1 {
   padding: 5vw;
-  margin-top: 80px;
+  top: 80px;
+  margin-bottom: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -646,7 +648,7 @@ footer {
 
 .section3 {
   padding: 2vw 4vw;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   display: flex;
   justify-content: space-between;
 }
