@@ -207,15 +207,15 @@ window.addEventListener('scroll', function () {
   }
 });
 
-function goFullscreen() {
-  if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-  } else if (document.documentElement.webkitRequestFullscreen) { // Safari
-      document.documentElement.webkitRequestFullscreen();
-  } else if (document.documentElement.msRequestFullscreen) { // IE11
-      document.documentElement.msRequestFullscreen();
-  }
-}
+// function goFullscreen() {
+//   if (document.documentElement.requestFullscreen) {
+//       document.documentElement.requestFullscreen();
+//   } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+//       document.documentElement.webkitRequestFullscreen();
+//   } else if (document.documentElement.msRequestFullscreen) { // IE11
+//       document.documentElement.msRequestFullscreen();
+//   }
+// }
 
 // goFullscreen();
 
@@ -225,46 +225,46 @@ function isMobileByScreenWidth() {
 }
 
 if (isMobileByScreenWidth()){
-  goFullscreen();
+  // goFullscreen();
 }
 
-if (isMobileByScreenWidth() && false) {
-  // Your mobile-specific function
+// if (isMobileByScreenWidth() && false) {
+//   // Your mobile-specific function
 
-let startY = 0;
+// let startY = 0;
 
-document.addEventListener("touchstart", (event) => {
-  startY = event.touches[0].clientY;
-});
+// document.addEventListener("touchstart", (event) => {
+//   startY = event.touches[0].clientY;
+// });
 
-document.addEventListener("touchmove", (event) => {
-  const currentY = event.touches[0].clientY;
-  const header = document.querySelector("header");
+// document.addEventListener("touchmove", (event) => {
+//   const currentY = event.touches[0].clientY;
+//   const header = document.querySelector("header");
 
-  if (currentY < startY) {
-    header.style.top = "-100px"; // Hide header on swipe up
-  } else {
-    header.style.top = "0"; // Show header on swipe down
-  }
+//   if (currentY < startY) {
+//     header.style.top = "-100px"; // Hide header on swipe up
+//   } else {
+//     header.style.top = "0"; // Show header on swipe down
+//   }
 
-  startY = currentY; // Update start position
-  console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiii")
-});
+//   startY = currentY; // Update start position
+//   console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiii")
+// });
 
 
-document.addEventListener("wheel", (event) => {
-  const delta = event.deltaY; // Positive for scrolling down, negative for scrolling up
-  const header = document.querySelector("header");
+// document.addEventListener("wheel", (event) => {
+//   const delta = event.deltaY; // Positive for scrolling down, negative for scrolling up
+//   const header = document.querySelector("header");
 
-  if (delta > 0) {
-    header.style.top = "-100px"; // Hide header when "scrolling" down
-  } else {
-    header.style.top = "0"; // Show header when "scrolling" up
-  }
-});
-console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiii")
+//   if (delta > 0) {
+//     header.style.top = "-100px"; // Hide header when "scrolling" down
+//   } else {
+//     header.style.top = "0"; // Show header when "scrolling" up
+//   }
+// });
+// console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiii")
 
-}
+// }
 
 
 

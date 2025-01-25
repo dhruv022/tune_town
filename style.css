@@ -244,9 +244,9 @@ header h1 {
 }
 
 section {
-  height: 87vh;
+  height: 85vh;
   scroll-snap-align: start;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 15px 30px;
   background: linear-gradient(to right, #000000ef, #1a2844);
   border-radius: 10px;
