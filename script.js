@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelector('.cards');
   
   let scrollAmount = 0;
-  const cardWidth = document.querySelector('.outer_card').offsetWidth + 32; // Include gap
+  const cardWidth = document.querySelector('.outer_card').offsetWidth + 29; // Include gap
   
   // Left arrow click functionality
   leftArrow.addEventListener('click', () => {
@@ -195,17 +195,17 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
 
 
 
-window.onload = function () {
-  setTimeout(function () {
-    window.scrollTo(0, 1);  // Scroll just a bit to hide the address bar
-  }, 500); // Give time for the page to load
-};
+// window.onload = function () {
+//   setTimeout(function () {
+//     window.scrollTo(0, 1);  // Scroll just a bit to hide the address bar
+//   }, 500); // Give time for the page to load
+// };
 
-window.addEventListener('scroll', function () {
-  if (window.scrollY > 50) {
-    document.body.style.paddingTop = '0'; // Remove padding-top if you used it for layout
-  }
-});
+// window.addEventListener('scroll', function () {
+//   if (window.scrollY > 50) {
+//     document.body.style.paddingTop = '0'; // Remove padding-top if you used it for layout
+//   }
+// });
 
 // function goFullscreen() {
 //   if (document.documentElement.requestFullscreen) {
@@ -265,6 +265,34 @@ if (isMobileByScreenWidth()){
 // console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiii")
 
 // }
+
+document.querySelectorAll('header a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent the default anchor behavior
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const navbarHeight = document.querySelector('header').offsetHeight;
+
+      // Scroll to the target element with an offset for the navbar
+      window.scrollTo({
+        top: targetElement.offsetTop - navbarHeight,
+        behavior: 'smooth', // Smooth scroll effect
+      });
+      console.log(`Scrolling to position: ${targetElement.offsetTop - navbarHeight}`);
+
+      console.log(`Scrolled to ${targetId}`);
+    } else {
+      console.error(`Element with ID ${targetId} not found.`);
+    }
+  });
+});
+
+const navbarHeight = document.querySelector('header').offsetHeight;
+console.log(`Navbar height: ${navbarHeight}`);
+
+
 
 
 

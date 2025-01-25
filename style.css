@@ -4,10 +4,17 @@ body {
   font-family: 'Poppins', sans-serif;
   padding-top: 80px;
 }
+html {
+  scroll-padding-top: 80px; /* Adjust this value to match the height of your navbar */
+  scroll-behavior: auto;  /* For smooth scrolling */
+}
 html, body {
   height: 100%;
   overflow-y: scroll; /* Ensure vertical scrolling */
+  overflow: auto;
+  scroll-behavior: auto; /* JavaScript overrides this */
 }
+
 
 * {
   margin: 0;
