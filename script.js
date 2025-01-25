@@ -266,28 +266,28 @@ if (isMobileByScreenWidth()){
 
 // }
 
-document.querySelectorAll('header a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent the default anchor behavior
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
+// document.querySelectorAll('header a[href^="#"]').forEach(link => {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault(); // Prevent the default anchor behavior
+//     const targetId = this.getAttribute('href').substring(1);
+//     const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-      const navbarHeight = document.querySelector('header').offsetHeight;
+//     if (targetElement) {
+//       const navbarHeight = document.querySelector('header').offsetHeight;
 
-      // Scroll to the target element with an offset for the navbar
-      window.scrollTo({
-        top: targetElement.offsetTop - navbarHeight,
-        behavior: 'smooth', // Smooth scroll effect
-      });
-      console.log(`Scrolling to position: ${targetElement.offsetTop - navbarHeight}`);
+//       // Scroll to the target element with an offset for the navbar
+//       window.scrollTo({
+//         top: targetElement.offsetTop - navbarHeight,
+//         behavior: 'smooth', // Smooth scroll effect
+//       });
+//       console.log(`Scrolling to position: ${targetElement.offsetTop - navbarHeight}`);
 
-      console.log(`Scrolled to ${targetId}`);
-    } else {
-      console.error(`Element with ID ${targetId} not found.`);
-    }
-  });
-});
+//       console.log(`Scrolled to ${targetId}`);
+//     } else {
+//       console.error(`Element with ID ${targetId} not found.`);
+//     }
+//   });
+// });
 
 const navbarHeight = document.querySelector('header').offsetHeight;
 console.log(`Navbar height: ${navbarHeight}`);
