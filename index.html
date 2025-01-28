@@ -1,541 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!--   <meta name="viewport" -->
+    <!--     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tune Town</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./assets/music4.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-<!--   <meta name="viewport" -->
-<!--     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tune Town</title>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <link rel="stylesheet" href="./style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="./assets/music4.png">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <script defer src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-</head>
-
-<body>
-  <div class="main">
-    <header>
-      <a href="#sec1" class="a1">
-        <img class="logo_img" src="assets/logo.png" alt="logo" />
-      </a>
-      <a href="#sec1" class="a2" style="display: none;">
-        <img src="./assets/music4.png" alt="logo" />
-      </a>
-      <div class="innerdiv">
-        <a href="#sec2">Our Work</a>
-        <a href="#sec3">Contact Us</a>
-        <a href="#sec5">About Us</a>
-        <a class="innerdiv2 a1" href="tel:+917711070000">
-          <p>Call us :- +91 771 1070 000</p>
+  <body>
+    <div class="main">
+      <header>
+        <a href="#sec1" class="a1">
+          <img class="logo_img" src="assets/logo.png" alt="logo" />
         </a>
-      </div>
-    </header>
-    <section id="sec1" class="section1">
-      <div class="icons-background">
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 10%; left: 20%; animation-delay: 0s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 30%; left: 50%; animation-delay: 1s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 50%; left: 70%; animation-delay: 2s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 70%; left: 30%; animation-delay: 3s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 90%; left: 80%; animation-delay: 4s"></i>
-
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 15%; left: 10%; animation-delay: 0.5s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 25%; left: 40%; animation-delay: 1.2s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 35%; left: 60%; animation-delay: 2.5s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 45%; left: 80%; animation-delay: 3.8s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 55%; left: 20%; animation-delay: 0.9s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 65%; left: 50%; animation-delay: 2.3s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 75%; left: 70%; animation-delay: 3.1s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 85%; left: 30%; animation-delay: 4.7s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 95%; left: 90%; animation-delay: 1.4s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 5%; left: 15%; animation-delay: 2.8s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 10%; left: 75%; animation-delay: 3.5s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 20%; left: 85%; animation-delay: 0.7s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 30%; left: 5%; animation-delay: 1.9s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 50%; left: 15%; animation-delay: 3.2s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 70%; left: 10%; animation-delay: 0.6s"></i>
-        <i class="fa-solid fa-music fa-music-thin icon" style="top: 80%; left: 45%; animation-delay: 1.8s"></i>
-      </div>
-
-      <div class="sc1">
-        <div class="first_p">
-          <!-- <h1>No. 1 Online Promotion Platform</h1> -->
-
-          <h1>Welcome to <span class="y1">Tunetown</span> Media</h1>
-          <!-- <p>Your Trusted Partner for Digital Growth!</p> -->
-          <p class="mbh1">We specialize in helping you achieve your goals through effective digital strategies. Our
-            comprehensive range of services includes:</p>
-          <ul class="mbh1">
-            <li>
-              <span class="y1 b1">YouTube Ads :</span> Get genuine and 100% real views through Google Ads, ensuring your content
-              gets the visibility it deserves.
-            </li>
-            <li>
-              <span class="y1 b1">Reel Promotion :</span> Leverage our network of 1000+ creators and big Instagram pages to promote
-              your reels and expand your audience.
-            </li>
-            <li>
-              <span class="y1 b1">Music Distribution :</span> Share your music with the world! We distribute your tracks on all
-              major audio platforms.
-            </li>
-          </ul>
-          <p class="mbh1">Whether you're an aspiring <span class="y1 b1">Artist</span>, a content <span class="y1 b1">Creator</span>, or a <span class="y1 b1">Brand</span> looking to scale, we’re here
-            to deliver exceptional results. <span class="y1 b1">Let’s grow together</span>!</p>
-          <!-- <p>
-            Welcome to Tunetown Media – Amplify Your Sound!<br />At Tunetown
-            Media, we are dedicated to helping artists, producers,<br />
-            and musicians showcase their talent to the world. Whether you're
-            an emerging artist<br />
-            or an established performer, our platform provides tools and
-            strategies<br />
-            to grow your audience and make your music heard.
-          </p> -->
-          <p class="p1" style="display: none;">
-            Welcome to Tunetown Media – Amplify Your Sound! At Tunetown
-            Media, we are dedicated to helping artists, producers,
-            and musicians showcase their talent to the world. Whether you're
-            an emerging artist or an established performer, our platform provides tools and
-            strategies to grow your audience and make your music heard.
-          </p>
-        </div>
-        <a class="whats_link" href="https://wa.me/917711070000" target="_blank">
-          <div class="button12">
-            <i class="fa-brands fa-whatsapp" style="font-size: 25px; color: green"></i>
-            What'sApp Us
-          </div>
+        <a href="#sec1" class="a2" style="display: none">
+          <img src="./assets/music4.png" alt="logo" />
         </a>
-      </div>
-
-      <div class="img">
-        <img src="./assets/music5.png">
-      </div>
-    </section>
-    <section id="sec2" class="section2">
-      <!-- <div class="icons-background">
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 10%; left: 20%; animation-delay: 0s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 30%; left: 50%; animation-delay: 1s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 50%; left: 70%; animation-delay: 2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 70%; left: 30%; animation-delay: 3s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 90%; left: 80%; animation-delay: 4s"
-          ></i>
-
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 15%; left: 10%; animation-delay: 0.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 25%; left: 40%; animation-delay: 1.2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 35%; left: 60%; animation-delay: 2.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 45%; left: 80%; animation-delay: 3.8s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 55%; left: 20%; animation-delay: 0.9s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 65%; left: 50%; animation-delay: 2.3s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 75%; left: 70%; animation-delay: 3.1s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 85%; left: 30%; animation-delay: 4.7s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 95%; left: 90%; animation-delay: 1.4s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 5%; left: 15%; animation-delay: 2.8s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 10%; left: 75%; animation-delay: 3.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 20%; left: 85%; animation-delay: 0.7s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 30%; left: 5%; animation-delay: 1.9s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 50%; left: 15%; animation-delay: 3.2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 70%; left: 10%; animation-delay: 0.6s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 80%; left: 45%; animation-delay: 1.8s"
-          ></i>
-        </div> -->
-      <h2>Our&nbsp;<span class="y1"> Clients</span></h2>
-
-      <!-- actual div -->
-      <!-- <div class="cards">
-        
-        <div class="outer_card">
-          <div class="card">
-            <div class="card-content">
-              <h1>Welcome to the Future</h1>
-              <p>Explore the cutting-edge designs of the modern web.</p>
-              <a href="#" class="btn">Learn More</a>
-            </div>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            vitae eros eget nunc vestibulum facilisis.
-          </p>
-        </div>
-        <div class="outer_card">
-          <div class="card">
-            <div class="card-content">
-              <h1>Welcome to the Future</h1>
-              <p>Explore the cutting-edge designs of the modern web.</p>
-              <a href="#" class="btn">Learn More</a>
-            </div>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            vitae eros eget nunc vestibulum facilisis.
-          </p>
-        </div>
-        <div class="outer_card">
-          <div class="card">
-            <div class="card-content">
-              <h1>Welcome to the Future</h1>
-              <p>Explore the cutting-edge designs of the modern web.</p>
-              <a href="#" class="btn">Learn More</a>
-            </div>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            vitae eros eget nunc vestibulum facilisis.
-          </p>
-        </div>
-      </div> -->
-
-      <div class="carousel">
-        <button class="carousel-arrow left-arrow">&lt;</button>
-        <div class="cards-wrapper">
-          <div class="cards">
-            <div class="outer_card">
-              <div class="card" style="--bg-image: url('./assets/happy_raikoti.PNG');">
-                <div class="card-content">
-                  <h1>Happy Raikoti</h1>
-                  <!-- <p>Explore the cutting-edge designs of the modern web.</p> -->
-                  <p></p>
-                  <a href="https://www.instagram.com/urshappyraikoti?igsh=dWQ0Z2N3OHozNXM5" target="_blank"
-                    class="btn">Visit Profile</a>
-                </div>
-              </div>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-            <div class="outer_card">
-              <div class="card" style="--bg-image: url('./assets/kirta_pendu.PNG');">
-                <div class="card-content">
-                  <h1>Kirta Pendu</h1>
-                  <!-- <p>Explore the cutting-edge designs of the modern web.</p> -->
-                  <p></p>
-                  <a href="https://www.instagram.com/kirta_pendu?igsh=OHRoN2RsYjVwYWdm" target="_blank"
-                    class="btn">Visit Profile</a>
-                </div>
-              </div>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-            <div class="outer_card">
-              <div class="card" style="--bg-image: url('./assets/amaam_bhullar.PNG');">
-                <div class="card-content">
-                  <h1>Amaan Bhullar</h1>
-                  <!-- <p>Explore the cutting-edge designs of the modern web.</p> -->
-                  <p></p>
-                  <a href="https://www.instagram.com/amaan_bhullar?igsh=MWZsY2N3cWJpcnBkZQ==" target="_blank"
-                    class="btn">Visit Profile</a>
-                </div>
-              </div>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-            <div class="outer_card">
-              <div class="card" style="--bg-image: url('./assets/ellymangat.PNG');">
-                <div class="card-content">
-                  <h1>Elly Mangat</h1>
-                  <!-- <p>Explore the cutting-edge designs of the modern web.</p> -->
-                  <p></p>
-                  <a href="https://www.instagram.com/ellymangat?igsh=MTU5ZGFnanhhdnRoOA==" target="_blank"
-                    class="btn">Visit Profile</a>
-                </div>
-              </div>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-            <div class="outer_card">
-              <div class="card" style="--bg-image: url('./assets/kkdeep_ukssiwala.PNG');">
-                <div class="card-content">
-                  <h1>KKdeep ukssiwala</h1>
-                  <!-- <p>Explore the cutting-edge designs of the modern web.</p> -->
-                  <p></p>
-                  <a href="https://www.instagram.com/kkdeep_ukssiwala?igsh=MWJsZndqNGg5NWdobg==" target="_blank"
-                    class="btn">Visit Profile</a>
-                </div>
-              </div>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-            <div class="outer_card">
-              <div class="card" style="--bg-image: url('./assets/lovely_gill.PNG');">
-                <div class="card-content">
-                  <h1>Lovely Gill</h1>
-                  <!-- <p>Explore the cutting-edge designs of the modern web.</p> -->
-                  <p></p>
-                  <a href="https://www.instagram.com/lovley_gill_5?igsh=MTU1ZGQxb2d1czZ2cw==" target="_blank"
-                    class="btn">Visit Profile</a>
-                </div>
-              </div>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-            <div class="outer_card">
-              <div class="card" style="--bg-image: url('./assets/sakshiratti.PNG');">
-                <div class="card-content">
-                  <h1>Sakshi Ratti</h1>
-                  <!-- <p>Explore the cutting-edge designs of the modern web.</p> -->
-                  <p></p>
-                  <a href="https://www.instagram.com/surjitbhullar_?igsh=ZGJhMnJ2NWJlbTh3" target="_blank"
-                    class="btn">Visit Profile</a>
-                </div>
-              </div>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-            <div class="outer_card">
-              <div class="card" style="--bg-image: url('./assets/surjit\ bhullar.PNG');">
-                <div class="card-content">
-                  <h1>Surjit Bhullar</h1>
-                  <!-- <p>Explore the cutting-edge designs of the modern web.</p> -->
-                  <p></p>
-                  <a href="https://www.instagram.com/surjitbhullar_?igsh=ZGJhMnJ2NWJlbTh3" target="_blank"
-                    class="btn">Visit Profile</a>
-                </div>
-              </div>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-
-            <!-- Repeat similar outer_card elements -->
-          </div>
-          <h3 style="text-align: center; padding: 20px;">Promote your songs with us at the <span class="y1">best prices!</span> <br>Our
-            <span class="y1">satisfied</span> clients showcased above are just a glimpse of the many <span class="y1">success stories</span> we've created. Join them
-            today and let your music reach new <span class="y1">heights!</span></h3>
-        </div>
-        <button class="carousel-arrow right-arrow">&gt;</button>
-      </div>
-
-
-    </section>
-    <section id="sec3" class="section3">
-      <!-- <div class="icons-background">
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 10%; left: 20%; animation-delay: 0s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 30%; left: 50%; animation-delay: 1s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 50%; left: 70%; animation-delay: 2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 70%; left: 30%; animation-delay: 3s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 90%; left: 80%; animation-delay: 4s"
-          ></i>
-
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 15%; left: 10%; animation-delay: 0.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 25%; left: 40%; animation-delay: 1.2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 35%; left: 60%; animation-delay: 2.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 45%; left: 80%; animation-delay: 3.8s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 55%; left: 20%; animation-delay: 0.9s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 65%; left: 50%; animation-delay: 2.3s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 75%; left: 70%; animation-delay: 3.1s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 85%; left: 30%; animation-delay: 4.7s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 95%; left: 90%; animation-delay: 1.4s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 5%; left: 15%; animation-delay: 2.8s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 10%; left: 75%; animation-delay: 3.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 20%; left: 85%; animation-delay: 0.7s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 30%; left: 5%; animation-delay: 1.9s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 50%; left: 15%; animation-delay: 3.2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 70%; left: 10%; animation-delay: 0.6s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 80%; left: 45%; animation-delay: 1.8s"
-          ></i>
-        </div> -->
-
-      <div id="main-content">
-        <div class="first_p">
-          <h1 class="m_0">Contact for <span class="y1"> Views</span></h1>
-          <p class="bold_p">
-            <span class="y1 b1">IG Trending</span><br />
-            <span>Make your reel trending worldwide.</span>
-          </p>
-          <p class="bold_p">
-            <span class="y1 b1">Youtube Monetize</span><br />
-            <span>Get 100% genuine views on youtube and increase reach and
-              growth<br />
-              of your channel.</span>
-          </p>
-          <p class="bold_p">
-            <span class="y1 b1">Artist Management</span><br />
-            <span>We provide services for online platform management and provide
-              services<br />
-              for photo-shoots and content creation.</span>
-          </p>
-        </div>
-        <div class="btn_grp">
-          <div class="button11" onclick="showForm()">Book Now</div>
-          <a class="button34" href="#sec2">
-            <div class="button13">Our Work</div>
+        <div class="innerdiv">
+          <a href="#sec2" onclick="scrollToDiv(event, 'sec2')">Our Work</a>
+          <a href="#sec3">Contact Us</a>
+          <a href="#sec5">About Us</a>
+          <a class="innerdiv2 a1" href="tel:+917711070000">
+            <p>Call us :- +91 771 1070 000</p>
           </a>
         </div>
-      </div>
-      <div id="form-container">
-        <!-- <form id="myForm" action="/submit" method="POST">
-          <h2>Fill The Form</h2>
-          <div>
-            <span>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required><br><br>
-            </span>
-            <span>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required><br><br>
-            </span>
-            <span>
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            </span>
-            <span>
-              <button onclick="goBack()">Go Back</button>
-              <button type="submit">Submit</button>
-            </span>
-          </div>
-        </form> -->
-        <form id="myForm">
-          <h2>Fill The Form</h2>
-          <div>
-            <span>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required><br><br>
-            </span>
-            <span>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required><br><br>
-            </span>
-            <span>
-              <label for="contact">Contact:</label>
-              <!-- <input type="tel" id="contact" name="contact" required><br><br> -->
-              <input type="tel" id="contact" name="contact" required pattern="^\d{10,}$"
-                title="Please enter a valid phone number with at least 10 digits."><br><br>
-            </span>
-            <span>
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            </span>
-            <span>
-              <button type="button" onclick="goBack()">Go Back</button>
-              <button type="submit">Submit</button>
-            </span>
-          </div>
-        </form>
-        <br>
-      </div>
-
-      <div class="img">
-        <img src="./assets/call_icon.png">
-      </div>
-
-
-    </section>
-    <section id="sec4" class="section4">
-      <!-- <div class="icons-background">
+      </header>
+      <section id="sec1" class="section1">
+        <div class="icons-background">
           <i
             class="fa-solid fa-music fa-music-thin icon"
             style="top: 10%; left: 20%; animation-delay: 0s"
@@ -621,192 +127,421 @@
             class="fa-solid fa-music fa-music-thin icon"
             style="top: 80%; left: 45%; animation-delay: 1.8s"
           ></i>
-        </div> -->
-      <h2>Our Recent&nbsp;<span class="y1"> Promotions</span></h2>
-      <div class="cards12">
-        <div class="outer_card12">
-          <div class="card12">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8CD1RacLDE4?si=4vroQP5F4AfRz_P3"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <div class="p12">
-            <p>
-              Get genuine and 100% real views through Google Ads, ensuring your content gets the visibility it deserves.
+        </div>
+
+        <div class="sc1">
+          <div class="first_p">
+            <h1>Welcome to <span class="y1">Tunetown</span> Media</h1>
+            <p class="mbh1">
+              We specialize in helping you achieve your goals through effective
+              digital strategies. Our comprehensive range of services includes:
+            </p>
+            <ul class="mbh1">
+              <li>
+                <span class="y1 b1">YouTube Ads :</span> Get genuine and 100%
+                real views through Google Ads, ensuring your content gets the
+                visibility it deserves.
+              </li>
+              <li>
+                <span class="y1 b1">Reel Promotion :</span> Leverage our network
+                of 1000+ creators and big Instagram pages to promote your reels
+                and expand your audience.
+              </li>
+              <li>
+                <span class="y1 b1">Music Distribution :</span> Share your music
+                with the world! We distribute your tracks on all major audio
+                platforms.
+              </li>
+            </ul>
+            <p class="mbh1">
+              Whether you're an aspiring <span class="y1 b1">Artist</span>, a
+              content <span class="y1 b1">Creator</span>, or a
+              <span class="y1 b1">Brand</span> looking to scale, we’re here to
+              deliver exceptional results.
+              <span class="y1 b1">Let’s grow together</span>!
+            </p>
+            <p class="p1" style="display: none">
+              Welcome to Tunetown Media – Amplify Your Sound! At Tunetown Media,
+              we are dedicated to helping artists, producers, and musicians
+              showcase their talent to the world. Whether you're an emerging
+              artist or an established performer, our platform provides tools
+              and strategies to grow your audience and make your music heard.
             </p>
           </div>
-
-        </div>
-
-        <div class="outer_card12">
-          <div class="card12">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/XTp5jaRU3Ws?si=QxuX6e_kdC8ZhtU1"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <div class="p12">
-            <p>
-              Share your music with the world! We distribute your tracks on all major audio platforms.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- <div class="icons-background">ss
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 10%; left: 20%; animation-delay: 0s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 30%; left: 50%; animation-delay: 1s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 50%; left: 70%; animation-delay: 2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 70%; left: 30%; animation-delay: 3s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 90%; left: 80%; animation-delay: 4s"
-          ></i>
-  
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 15%; left: 10%; animation-delay: 0.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 25%; left: 40%; animation-delay: 1.2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 35%; left: 60%; animation-delay: 2.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 45%; left: 80%; animation-delay: 3.8s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 55%; left: 20%; animation-delay: 0.9s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 65%; left: 50%; animation-delay: 2.3s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 75%; left: 70%; animation-delay: 3.1s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 85%; left: 30%; animation-delay: 4.7s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 95%; left: 90%; animation-delay: 1.4s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 5%; left: 15%; animation-delay: 2.8s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 10%; left: 75%; animation-delay: 3.5s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 20%; left: 85%; animation-delay: 0.7s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 30%; left: 5%; animation-delay: 1.9s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 50%; left: 15%; animation-delay: 3.2s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 70%; left: 10%; animation-delay: 0.6s"
-          ></i>
-          <i
-            class="fa-solid fa-music fa-music-thin icon"
-            style="top: 80%; left: 45%; animation-delay: 1.8s"
-          ></i>
-        </div> -->
-    <section id="sec5" class="section5">
-      <h2><span class="y1">Client</span> Relationship</h2>
-      <div class="outer_div">
-        <div class="inner_div">
-          <i class="fa-solid fa-user"></i>
-          <p>
-            <span class="count" data-count="2000">0</span>+<br>
-            Satisfied Clients
-          </p>
-        </div>
-        <div class="inner_div">
-          <i class="fa-solid fa-tv"></i>
-          <p>
-            <span class="count" data-count="3000">0</span>+<br>
-            Punjabi Songs
-          </p>
-        </div>
-        <div class="inner_div">
-          <i class="fa-solid fa-earth-asia"></i>
-          <p>
-            <span class="count" data-count="40000">0</span>+<br>
-            Global Customers
-          </p>
-        </div>
-      </div>
-      <div class="together">
-        <div class="part1">
-          <h1>Let's Work Together</h1>
-        </div>
-        <div class="part2">
-          <a class="button111" href="tel:+917711070000">
-            Call Us
-          </a>
-          <a class="whats_link" href="https://wa.me/917711070000" target="_blank">
-            <div class="button133">
-              <i class="fa-brands fa-whatsapp" style="font-size: 25px; color: green"></i>
-              <div>
-                What's App
-              </div>
+          <a
+            class="whats_link"
+            href="https://wa.me/917711070000"
+            target="_blank"
+          >
+            <div class="button12">
+              <i
+                class="fa-brands fa-whatsapp"
+                style="font-size: 25px; color: green"
+              ></i>
+              What'sApp Us
             </div>
           </a>
         </div>
-      </div>
-      <div class="footer">
-        <h3><span class="y1">TUNETOWN</span> MEDIA</h3>
-        <div class="innerr12">
-          <div>
-            <i class="fa-brands fa-facebook"></i>
-            <a href="https://www.instagram.com/tunetownmedia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <i class="fa-brands fa-snapchat"></i>
-            <i class="fa-brands fa-youtube"></i>
+
+        <div class="img">
+          <img src="./assets/music5.png" />
+        </div>
+      </section>
+      <section id="sec2" class="section2">
+        <h2>Our&nbsp;<span class="y1"> Clients</span></h2>
+        <div class="carousel">
+          <button class="carousel-arrow left-arrow">&lt;</button>
+          <div class="cards-wrapper">
+            <div class="cards">
+              <div class="outer_card">
+                <div
+                  class="card"
+                  style="--bg-image: url('./assets/happy_raikoti.PNG')"
+                >
+                  <div class="card-content">
+                    <h1>Happy Raikoti</h1>
+                    <p></p>
+                    <a
+                      href="https://www.instagram.com/urshappyraikoti?igsh=dWQ0Z2N3OHozNXM5"
+                      target="_blank"
+                      class="btn"
+                      >Visit Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="outer_card">
+                <div
+                  class="card"
+                  style="--bg-image: url('./assets/kirta_pendu.PNG')"
+                >
+                  <div class="card-content">
+                    <h1>Kirta Pendu</h1>
+                    <p></p>
+                    <a
+                      href="https://www.instagram.com/kirta_pendu?igsh=OHRoN2RsYjVwYWdm"
+                      target="_blank"
+                      class="btn"
+                      >Visit Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="outer_card">
+                <div
+                  class="card"
+                  style="--bg-image: url('./assets/amaam_bhullar.PNG')"
+                >
+                  <div class="card-content">
+                    <h1>Amaan Bhullar</h1>
+                    <p></p>
+                    <a
+                      href="https://www.instagram.com/amaan_bhullar?igsh=MWZsY2N3cWJpcnBkZQ=="
+                      target="_blank"
+                      class="btn"
+                      >Visit Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="outer_card">
+                <div
+                  class="card"
+                  style="--bg-image: url('./assets/ellymangat.PNG')"
+                >
+                  <div class="card-content">
+                    <h1>Elly Mangat</h1>
+                    <p></p>
+                    <a
+                      href="https://www.instagram.com/ellymangat?igsh=MTU5ZGFnanhhdnRoOA=="
+                      target="_blank"
+                      class="btn"
+                      >Visit Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="outer_card">
+                <div
+                  class="card"
+                  style="--bg-image: url('./assets/kkdeep_ukssiwala.PNG')"
+                >
+                  <div class="card-content">
+                    <h1>KKdeep ukssiwala</h1>
+                    <p></p>
+                    <a
+                      href="https://www.instagram.com/kkdeep_ukssiwala?igsh=MWJsZndqNGg5NWdobg=="
+                      target="_blank"
+                      class="btn"
+                      >Visit Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="outer_card">
+                <div
+                  class="card"
+                  style="--bg-image: url('./assets/lovely_gill.PNG')"
+                >
+                  <div class="card-content">
+                    <h1>Lovely Gill</h1>
+                    <p></p>
+                    <a
+                      href="https://www.instagram.com/lovley_gill_5?igsh=MTU1ZGQxb2d1czZ2cw=="
+                      target="_blank"
+                      class="btn"
+                      >Visit Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="outer_card">
+                <div
+                  class="card"
+                  style="--bg-image: url('./assets/sakshiratti.PNG')"
+                >
+                  <div class="card-content">
+                    <h1>Sakshi Ratti</h1>
+                    <p></p>
+                    <a
+                      href="https://www.instagram.com/surjitbhullar_?igsh=ZGJhMnJ2NWJlbTh3"
+                      target="_blank"
+                      class="btn"
+                      >Visit Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="outer_card">
+                <div
+                  class="card"
+                  style="--bg-image: url('./assets/surjit\ bhullar.PNG')"
+                >
+                  <div class="card-content">
+                    <h1>Surjit Bhullar</h1>
+                    <p></p>
+                    <a
+                      href="https://www.instagram.com/surjitbhullar_?igsh=ZGJhMnJ2NWJlbTh3"
+                      target="_blank"
+                      class="btn"
+                      >Visit Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 style="text-align: center; padding: 20px">
+              Promote your songs with us at the
+              <span class="y1">best prices!</span> <br />Our
+              <span class="y1">satisfied</span> clients showcased above are just
+              a glimpse of the many
+              <span class="y1">success stories</span> we've created. Join them
+              today and let your music reach new
+              <span class="y1">heights!</span>
+            </h3>
           </div>
-          <div>
-           <a href="https://animated-portfolio-starter-production.up.railway.app/"
-              target="_blank">©Tunetown Media. All Rights Reserved.</a>
+          <button class="carousel-arrow right-arrow">&gt;</button>
+        </div>
+      </section>
+      <section id="sec3" class="section3">
+        <div id="main-content">
+          <div class="first_p">
+            <h1 class="m_0">Contact for <span class="y1"> Views</span></h1>
+            <p class="bold_p">
+              <span class="y1 b1">IG Trending</span><br />
+              <span>Make your reel trending worldwide.</span>
+            </p>
+            <p class="bold_p">
+              <span class="y1 b1">Youtube Monetize</span><br />
+              <span
+                >Get 100% genuine views on youtube and increase reach and
+                growth<br />
+                of your channel.</span
+              >
+            </p>
+            <p class="bold_p">
+              <span class="y1 b1">Artist Management</span><br />
+              <span
+                >We provide services for online platform management and provide
+                services<br />
+                for photo-shoots and content creation.</span
+              >
+            </p>
+          </div>
+          <div class="btn_grp">
+            <div class="button11" onclick="showForm()">Book Now</div>
+            <a class="button34" href="#sec2">
+              <div class="button13">Our Work</div>
+            </a>
           </div>
         </div>
+        <div id="form-container">
+          <form id="myForm">
+            <h2>Fill The Form</h2>
+            <div>
+              <span>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required /><br /><br />
+              </span>
+              <span>
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                /><br /><br />
+              </span>
+              <span>
+                <label for="contact">Contact:</label>
+                <input
+                  type="tel"
+                  id="contact"
+                  name="contact"
+                  required
+                  pattern="^\d{10,}$"
+                  title="Please enter a valid phone number with at least 10 digits."
+                /><br /><br />
+              </span>
+              <span>
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea
+                ><br /><br />
+              </span>
+              <span>
+                <button type="button" onclick="goBack()">Go Back</button>
+                <button type="submit">Submit</button>
+              </span>
+            </div>
+          </form>
+          <br />
+        </div>
 
-      </div>
+        <div class="img">
+          <img src="./assets/call_icon.png" />
+        </div>
+      </section>
+      <section id="sec4" class="section4">
+        <h2>Our Recent&nbsp;<span class="y1"> Promotions</span></h2>
+        <div class="cards12">
+          <div class="outer_card12">
+            <div class="card12">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/8CD1RacLDE4?si=4vroQP5F4AfRz_P3"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="p12">
+              <p>
+                Get genuine and 100% real views through Google Ads, ensuring
+                your content gets the visibility it deserves.
+              </p>
+            </div>
+          </div>
 
-    </section>
-  </div>
+          <div class="outer_card12">
+            <div class="card12">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/XTp5jaRU3Ws?si=QxuX6e_kdC8ZhtU1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="p12">
+              <p>
+                Share your music with the world! We distribute your tracks on
+                all major audio platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!--     <script src="./script.js"></script> -->
-</body>
-
+      <section id="sec5" class="section5">
+        <h2><span class="y1">Client</span> Relationship</h2>
+        <div class="outer_div">
+          <div class="inner_div">
+            <i class="fa-solid fa-user"></i>
+            <p>
+              <span class="count" data-count="2000">0</span>+<br />
+              Satisfied Clients
+            </p>
+          </div>
+          <div class="inner_div">
+            <i class="fa-solid fa-tv"></i>
+            <p>
+              <span class="count" data-count="3000">0</span>+<br />
+              Punjabi Songs
+            </p>
+          </div>
+          <div class="inner_div">
+            <i class="fa-solid fa-earth-asia"></i>
+            <p>
+              <span class="count" data-count="40000">0</span>+<br />
+              Global Customers
+            </p>
+          </div>
+        </div>
+        <div class="together">
+          <div class="part1">
+            <h1>Let's Work Together</h1>
+          </div>
+          <div class="part2">
+            <a class="button111" href="tel:+917711070000"> Call Us </a>
+            <a
+              class="whats_link"
+              href="https://wa.me/917711070000"
+              target="_blank"
+            >
+              <div class="button133">
+                <i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 25px; color: green"
+                ></i>
+                <div>What's App</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="footer">
+          <h3><span class="y1">TUNETOWN</span> MEDIA</h3>
+          <div class="innerr12">
+            <div>
+              <i class="fa-brands fa-facebook"></i>
+              <a
+                href="https://www.instagram.com/tunetownmedia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <i class="fa-brands fa-snapchat"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div>
+              <a
+                href="https://animated-portfolio-starter-production.up.railway.app/"
+                target="_blank"
+                >©Tunetown Media. All Rights Reserved.</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
