@@ -191,6 +191,20 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     });
 });
 
+function scrollToDiv(event, divId) {
+  // event.preventDefault(); // Prevent default anchor behavior
+  console.log(event,divId)
+  const targetDiv = document.getElementById(divId);
+  console.log(targetDiv)
+  if (targetDiv) {
+    const offset = +50; // Adjust this value for the desired offset above the div
+    const yPosition = targetDiv.getBoundingClientRect().top + window.scrollY + offset;
+    window.scrollTo({
+      top: yPosition,
+      behavior: 'smooth', // For smooth scrolling
+    });
+  }
+}
 
 
 
