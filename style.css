@@ -4,15 +4,22 @@ body {
   font-family: 'Poppins', sans-serif;
   padding-top: 80px;
 }
+
 html {
-  scroll-padding-top: 80px; /* Adjust this value to match the height of your navbar */
-  scroll-behavior: auto;  /* For smooth scrolling */
+  scroll-padding-top: 800px;
+  /* Adjust this value to match the height of your navbar */
+  scroll-behavior: auto;
+  /* For smooth scrolling */
 }
-html, body {
+
+html,
+body {
   height: 100%;
-  overflow-y: scroll; /* Ensure vertical scrolling */
+  overflow-y: scroll;
+  /* Ensure vertical scrolling */
   overflow: auto;
-  scroll-behavior: auto; /* JavaScript overrides this */
+  scroll-behavior: auto;
+  /* JavaScript overrides this */
 }
 
 
@@ -121,7 +128,8 @@ textarea {
 body {
   line-height: 1.6;
   font-style: normal;
-  font-weight: 400; /* Regular */
+  font-weight: 400;
+  /* Regular */
 }
 
 /* Styling for the fixed header */
@@ -182,9 +190,10 @@ header {
   padding: 14px 30px 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  border-radius: 0 0 20px 20px;
+  /* border-radius: 0 0 20px 20px; */
   font-size: 15px;
-  transition: top 0.3s ease-in-out; /* Add transition for smooth hiding */
+  transition: top 0.3s ease-in-out;
+  /* Add transition for smooth hiding */
 
   .innerdiv {
     display: flex;
@@ -215,11 +224,13 @@ header {
 
 /* Add the hidden class to hide the header */
 header.hidden {
-  top: -500px; /* Adjust based on the height of the header */
+  top: -500px;
+  /* Adjust based on the height of the header */
 }
 
 .hidden {
-  top: -500px; /* Adjust based on the height of the header */
+  top: -500px;
+  /* Adjust based on the height of the header */
 }
 
 .innerdiv2:hover {
@@ -236,9 +247,10 @@ header h1 {
 
 .main {
   padding-top: 80px !important;
-  padding: 10px 5px;
+  /* padding: 10px 5px; */
   width: 100%;
   scroll-padding-top: 80px;
+  background: linear-gradient(to right, #000000, #1a2844);
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -252,12 +264,12 @@ header h1 {
 }
 
 section {
-  height: 87vh;
+  height: 90vh;
   scroll-snap-align: start;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   padding: 15px 30px;
-  background: linear-gradient(to right, #000000ef, #1a2844);
-  border-radius: 10px;
+  background: linear-gradient(to right, #000000, #1a2844);
+  /* border-radius: 10px; */
   color: white;
   z-index: 1;
   overflow: hidden;
@@ -335,7 +347,7 @@ footer {
 }
 
 .section5 {
-  border-radius: 10px 10px 0px 0px;
+  /* border-radius: 10px 10px 0px 0px; */
   margin-bottom: 0px;
   padding: 0px !important;
 
@@ -497,7 +509,7 @@ footer {
   h2 {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     font-size: 30px;
   }
 }
@@ -760,6 +772,16 @@ footer {
 
 @media (max-width : 738px) {
 
+  .section1 {
+    padding: 15px 30px;
+  }
+
+  .img {
+    img {
+      height: 70vh;
+    }
+  }
+
   .m_0 {
     font-size: 30px !important;
   }
@@ -982,10 +1004,10 @@ html {
   /* Smooth scrolling for iOS */
 }
 
-.y1{
+.y1 {
   color: rgb(241, 80, 102);
 }
 
-.b1{
+.b1 {
   font-weight: 800 !important;
 }
